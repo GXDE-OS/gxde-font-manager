@@ -3,9 +3,9 @@
  "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
  "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 <policyconfig>
-  <vendor>LinuxDeepin</vendor>
-  <vendor_url>https://www.deepin.com/</vendor_url>
-  <action id="com.deepin.pkexec.font-uninstall">
+  <vendor>GXDE OS</vendor>
+  <vendor_url>https://gxde.gfdgdxi.top/</vendor_url>
+  <action id="com.gxde.pkexec.font-uninstall">
     <message>Authentication is required to uninstall the font file</message>
     <message xml:lang="zh_CN">卸载字体文件包需要授权</message>
     <icon_name>font-x-generic</icon_name>
@@ -14,7 +14,7 @@
       <allow_inactive>no</allow_inactive>
       <allow_active>auth_admin_keep</allow_active>
     </defaults>
-    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/dfont-uninstall</annotate>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/gfont-uninstall</annotate>
     <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
   </action>
 

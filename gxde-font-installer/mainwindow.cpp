@@ -37,7 +37,7 @@ MainWindow::MainWindow(QWidget *parent)
       m_homePage(new HomePage),
       m_singleFilePage(new SingleFilePage),
       m_multiFilePage(new MultiFilePage),
-      m_settings("deepin", "deepin-font-installer"),
+      m_settings("gxde", "gxde-font-installer"),
       m_themeAction(new QAction(tr("Dark theme"), this))
 {
     titlebar()->setIcon(QIcon(":/images/icon.svg"));
@@ -52,7 +52,7 @@ MainWindow::MainWindow(QWidget *parent)
     m_mainLayout->addWidget(m_multiFilePage);
 
     // init window flags.
-    setWindowTitle(tr("Deepin Font Installer"));
+    setWindowTitle(tr("GXDE Font Installer"));
     setCentralWidget(m_mainWidget);
     setAcceptDrops(true);
 

@@ -1,0 +1,3 @@
+usr/include/gxde-font-installer/
+usr/lib/*/pkgconfig/gxde-font-installer.pc
+usr/lib/*/libgxde-font-installer.so

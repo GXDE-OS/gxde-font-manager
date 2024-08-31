@@ -38,20 +38,20 @@ int main(int argc, char *argv[])
     app.setTheme("light");
     app.setAttribute(Qt::AA_UseHighDpiPixmaps);
     app.loadTranslator();
-    app.setOrganizationName("deepin");
+    app.setOrganizationName("GXDE");
     app.setApplicationVersion(DApplication::buildVersion("1.0"));
-    app.setApplicationAcknowledgementPage("https://www.deepin.org/original/deepin-font-installer/");
-    app.setProductIcon(QIcon(":/images/deepin-font-installer.svg"));
-    app.setProductName(DApplication::translate("Main", "Deepin Font Installer"));
+    app.setApplicationAcknowledgementPage("https://gitee.com/GXDE-OS/gxde-font-manager");
+    app.setProductIcon(QIcon(":/images/gxde-font-installer.svg"));
+    app.setProductName(DApplication::translate("Main", "GXDE Font Installer"));
     app.setStyleSheet(Utils::getQssContent(":/qss/style.qss"));
-    app.setApplicationDescription(DApplication::translate("Main","Deepin Font Installer is used to install and uninstall font file for users with bulk install function."));
+    app.setApplicationDescription(DApplication::translate("Main","GXDE Font Installer is used to install and uninstall font file for users with bulk install function."));
 
     DLogManager::registerConsoleAppender();
     DLogManager::registerFileAppender();
 
     // add command line parser to app.
     QCommandLineParser parser;
-    parser.setApplicationDescription("Deepin Font Installer.");
+    parser.setApplicationDescription("GXDE Font Installer.");
     parser.addHelpOption();
     parser.addVersionOption();
     parser.addPositionalArgument("filename", "Font file path.", "file [file..]");
@@ -60,10 +60,10 @@ int main(int argc, char *argv[])
     // init modules.
     MainWindow w;
     w.setFixedSize(520, 440);
-    w.setWindowIcon(QIcon(":/images/deepin-font-installer.svg"));
+    w.setWindowIcon(QIcon(":/images/gxde-font-installer.svg"));
     w.show();
 
-    if (app.setSingleInstance("deepin-font-installer")) {
+    if (app.setSingleInstance("gxde-font-installer")) {
         Dtk::Widget::moveToCenter(&w);
     }
 

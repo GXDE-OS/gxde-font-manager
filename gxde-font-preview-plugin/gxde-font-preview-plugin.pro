@@ -6,13 +6,13 @@
 
 QT       += core gui widgets
 
-TARGET = deepin-font-preview-plugin
+TARGET = gxde-font-preview-plugin
 TEMPLATE = lib
 CONFIG += plugin link_pkgconfig
 PKGCONFIG += freetype2 fontconfig dde-file-manager dtkwidget
 
-LIBS += -L$$OUT_PWD/../libdeepin-font-installer -ldeepin-font-installer
-INCLUDEPATH += $$PWD/../libdeepin-font-installer
+LIBS += -L$$OUT_PWD/../libgxde-font-installer -lgxde-font-installer
+INCLUDEPATH += $$PWD/../libgxde-font-installer
 
 isEqual(ARCH, sw_64){
     DEFINES += SW_CPUINFO
@@ -32,7 +32,7 @@ SOURCES += \
 HEADERS += \
     fontpreview.h
 DISTFILES += \
-    deepin-font-preview-plugin.json
+    gxde-font-preview-plugin.json
 
 PLUGIN_INSTALL_DIR = $$PLUGINDIR/previews
 

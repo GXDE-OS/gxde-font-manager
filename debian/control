@@ -4,24 +4,26 @@ Priority: optional
 Maintainer: Rekols <rekols@foxmail.com>
 Build-Depends: debhelper (>= 9),pkg-config, qt5-qmake, libdtkwidget2-dev, qttools5-dev-tools, libqt5svg5-dev, libfontconfig1-dev, libfreetype6-dev, libdde-file-manager-dev, deepin-gettext-tools
 Standards-Version: 3.9.8
-Homepage: http://www.deepin.org
+Homepage: https://gxde.gfdgdxi.top
 
 Package: gxde-font-installer
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libgxde-font-installer( =${binary:Version})
-Description: Deepin Font Installer binary
- Deepin Font Installer is used to install and uninstall font file for users with bulk install function.
+Breaks: deepin-font-installer
+Replaces: deepin-font-installer
+Description: GXDE Font Installer binary
+ GXDE Font Installer is used to install and uninstall font file for users with bulk install function.
 
 Package: libgxde-font-installer
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
-Description: Deepin Font Installer library
+Description: GXDE Font Installer library
  This package contains the shared libraries.
 
 Package: libgxde-font-installer-dev
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libgxde-font-installer( =${binary:Version})
-Description: Deepin Font Instaler Devel library
+Description: GXDE Font Instaler Devel library
  This package contains the header files and static libraries
  of libgxde-font-installer

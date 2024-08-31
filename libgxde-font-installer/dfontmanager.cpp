@@ -155,7 +155,7 @@ bool DFontManager::doCmd(const QString &program, const QStringList &arguments)
 
 void DFontManager::handleInstall()
 {
-    if (doCmd("pkexec", QStringList() << "dfont-install" << m_instFileList)) {
+    if (doCmd("pkexec", QStringList() << "gfont-install" << m_instFileList)) {
         if (m_instFileList.count() == 1) {
             emit installFinished();
         }
@@ -164,14 +164,14 @@ void DFontManager::handleInstall()
 
 void DFontManager::handleUnInstall()
 {
-    if (doCmd("pkexec", QStringList() << "dfont-uninstall" << m_uninstFile)) {
+    if (doCmd("pkexec", QStringList() << "gfont-uninstall" << m_uninstFile)) {
         emit uninstallFinished();
     }
 }
 
 void DFontManager::handleReInstall()
 {
-    if (doCmd("pkexec", QStringList() << "dfont-install" << m_reinstFile)) {
+    if (doCmd("pkexec", QStringList() << "gfont-install" << m_reinstFile)) {
         emit reinstallFinished();
     }
 }

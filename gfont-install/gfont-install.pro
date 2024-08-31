@@ -3,7 +3,7 @@ QT -= gui
 
 CONFIG += c++11
 
-TARGET = dfont-install
+TARGET = gfont-install
 CONFIG += console
 CONFIG -= app_bundle
 

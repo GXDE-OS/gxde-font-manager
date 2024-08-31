@@ -5,12 +5,15 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-           deepin-font-installer\
-           libdeepin-font-installer \
-           deepin-font-preview-plugin \
-           dfont-install \
-	   dfont-uninstall
+           gxde-font-installer\
+           libgxde-font-installer \
+           gxde-font-preview-plugin \
+           gfont-install \
+	       gfont-uninstall
 
-deepin-font-installer.depends = libdeepin-font-installer
-deepin-font-preview-plugin.depends = libdeepin-font-installer
-dfont-install.depends = libdeepin-font-installer
+#           dfont-install \
+# 	        dfont-uninstall \
+
+gxde-font-installer.depends = libgxde-font-installer
+gxde-font-preview-plugin.depends = libgxde-font-installer
+gfont-install.depends = libgxde-font-installer

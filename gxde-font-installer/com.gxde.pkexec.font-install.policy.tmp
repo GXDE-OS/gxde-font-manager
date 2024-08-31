@@ -3,9 +3,9 @@
  "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
  "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 <policyconfig>
-  <vendor>LinuxDeepin</vendor>
-  <vendor_url>https://www.deepin.com/</vendor_url>
-  <action id="com.deepin.pkexec.font-install">
+  <vendor>GXDE OS</vendor>
+  <vendor_url>https://gxde.gfdgdxi.top/</vendor_url>
+  <action id="com.gxde.pkexec.font-install">
     <message>Authentication is required to install the font file</message>
     <message xml:lang="zh_CN">安装字体文件包需要授权</message>
     <icon_name>font-x-generic</icon_name>
