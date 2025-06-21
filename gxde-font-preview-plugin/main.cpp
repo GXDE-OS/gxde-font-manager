@@ -1,4 +1,4 @@
-#include "dde-file-manager/dfmfilepreviewplugin.h"
+#include "gxde-file-manager/dfmfilepreviewplugin.h"
 
 #include "fontpreview.h"
 

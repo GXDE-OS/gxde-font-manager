@@ -4,7 +4,7 @@ GXDE Font Installer is used to install and uninstall font file for users with bu
 
 ## Dependencies
 
-* sudo apt install libdtkwidget-dev qttools5-dev-tools libfontconfig1-dev libfreetype6-dev libdde-file-manager-dev
+* sudo apt install libdtkwidget-dev qttools5-dev-tools libfontconfig1-dev libfreetype6-dev libgxde-file-manager-dev
 
 ## Installation
 

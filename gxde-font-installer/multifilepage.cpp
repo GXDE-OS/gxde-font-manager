@@ -257,7 +257,7 @@ void MultiFilePage::onWorkerFinished()
 void MultiFilePage::onViewFileBtnClicked()
 {
     QUrl url = QUrl::fromLocalFile("/usr/share/fonts/deepin-font-install");
-    QProcess::startDetached("dde-file-manager", QStringList() << url.toString());
+    QProcess::startDetached("gxde-file-manager", QStringList() << url.toString());
 }
 
 void MultiFilePage::handleCloseBtnClicked(DSimpleListItem *item)

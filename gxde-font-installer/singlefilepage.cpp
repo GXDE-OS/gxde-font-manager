@@ -361,4 +361,4 @@ void SingleFilePage::viewFilePath()
     query.addQueryItem("selectUrl", QUrl::fromLocalFile(m_filePath).toString());
     url.setQuery(query);
 
-    QProcess::startDetached("dde-file-manager", QStringList(url.toString()));}
+    QProcess::startDetached("gxde-file-manager", QStringList(url.toString()));}

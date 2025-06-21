@@ -9,7 +9,7 @@ QT       += core gui widgets
 TARGET = gxde-font-preview-plugin
 TEMPLATE = lib
 CONFIG += plugin link_pkgconfig
-PKGCONFIG += freetype2 fontconfig dde-file-manager dtkwidget
+PKGCONFIG += freetype2 fontconfig gxde-file-manager dtkwidget
 
 LIBS += -L$$OUT_PWD/../libgxde-font-installer -lgxde-font-installer
 INCLUDEPATH += $$PWD/../libgxde-font-installer
@@ -20,9 +20,9 @@ isEqual(ARCH, sw_64){
 }
 
 isEmpty(LIB_INSTALL_DIR) {
-    PLUGINDIR = $$[QT_INSTALL_LIBS]/dde-file-manager/plugins
+    PLUGINDIR = $$[QT_INSTALL_LIBS]/gxde-file-manager/plugins
 } else {
-    PLUGINDIR = $$LIB_INSTALL_DIR/dde-file-manager/plugins
+    PLUGINDIR = $$LIB_INSTALL_DIR/gxde-file-manager/plugins
 }
 
 SOURCES += \
