@@ -22,7 +22,9 @@
 #include <QVBoxLayout>
 #include <QFormLayout>
 #include <QTextLayout>
-#include <QSvgWidget>
+#include <QLabel>
+#include <QSvgRenderer>
+#include <QPainter>
 #include <QFileInfo>
 #include <QUrlQuery>
 #include <QProcess>
@@ -101,7 +103,13 @@ SingleFilePage::SingleFilePage(QWidget *parent)
       m_spinner(new DSpinner),
       m_bottomLayout(new QStackedLayout)
 {
-    QSvgWidget *iconWidget = new QSvgWidget(":/images/font-x-generic.svg");
+    QLabel *iconWidget = new QLabel;
+    QSvgRenderer renderer(QString(":/images/font-x-generic.svg"));
+    QPixmap pixmap(70, 70);
+    pixmap.fill(Qt::transparent);
+    QPainter painter(&pixmap);
+    renderer.render(&painter);
+    iconWidget->setPixmap(pixmap);
     iconWidget->setFixedSize(70, 70);
 
     QLabel *styleLabel = new QLabel(tr("Style: "));
@@ -133,7 +141,6 @@ SingleFilePage::SingleFilePage(QWidget *parent)
     btnsLayout->addWidget(m_closeBtn);
     btnsLayout->addStretch();
     btnsLayout->setSpacing(20);
-    btnsLayout->setMargin(0);
 
     QWidget *progressWidget = new QWidget;
     QVBoxLayout *progressLayout = new QVBoxLayout(progressWidget);
@@ -155,7 +162,6 @@ SingleFilePage::SingleFilePage(QWidget *parent)
     mainLayout->addSpacing(8);
     mainLayout->addLayout(m_bottomLayout);
     mainLayout->setSpacing(0);
-    mainLayout->setMargin(0);
     mainLayout->setContentsMargins(50, 0, 50, 20);
 
     // init property.

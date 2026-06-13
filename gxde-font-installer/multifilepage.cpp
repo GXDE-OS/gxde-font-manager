@@ -114,7 +114,6 @@ MultiFilePage::MultiFilePage(QWidget *parent)
 
     mainLayout->addStretch();
     mainLayout->setSpacing(0);
-    mainLayout->setMargin(0);
     mainLayout->setContentsMargins(10, 10, 10, 0);
 
     connect(m_installBtn, &QPushButton::clicked, this, &MultiFilePage::batchInstallation);

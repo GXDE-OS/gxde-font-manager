@@ -23,7 +23,6 @@
 #include "dhidpihelper.h"
 #include "dthememanager.h"
 
-#include <QSvgWidget>
 #include <QDebug>
 #include <QDragEnterEvent>
 #include <QMimeData>

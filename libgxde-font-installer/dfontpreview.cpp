@@ -1,7 +1,6 @@
 #include "dfontpreview.h"
 #include <QApplication>
 #include <QGuiApplication>
-#include <QDesktopWidget>
 #include <QTextStream>
 #include <QFileInfo>
 #include <QPainter>
@@ -99,21 +98,21 @@ void DFontPreview::paintEvent(QPaintEvent *e)
     // if we don't have lowercase/uppercase/punctuation text in the face
     // we omit it directly, and render a random text below.
     if (checkFontContainText(lowerTextStock)) {
-        const int lowerWidth = metrics.width(lowerTextStock);
+        const int lowerWidth = metrics.horizontalAdvance(lowerTextStock);
         const int lowerHeight = metrics.height();
         painter.drawText(QRect(x, y + padding, lowerWidth, lowerHeight), Qt::AlignLeft, lowerTextStock);
         y += lowerHeight;
     }
 
     if (checkFontContainText(upperTextStock)) {
-        const int upperWidth = metrics.width(upperTextStock);
+        const int upperWidth = metrics.horizontalAdvance(upperTextStock);
         const int upperHeight = metrics.height();
         painter.drawText(QRect(x, y + padding, upperWidth, upperHeight), Qt::AlignLeft, upperTextStock);
         y += upperHeight;
     }
 
     if (checkFontContainText(punctuationTextStock)) {
-        const int punWidth = metrics.width(punctuationTextStock);
+        const int punWidth = metrics.horizontalAdvance(punctuationTextStock);
         int punHeight = metrics.height();
         painter.drawText(QRect(x, y + padding, punWidth, punHeight), Qt::AlignLeft, punctuationTextStock);
         y += punHeight;
@@ -125,7 +124,7 @@ void DFontPreview::paintEvent(QPaintEvent *e)
         painter.setFont(font);
 
         QFontMetrics met(font);
-        int sampleWidth = met.width(sampleString);
+        int sampleWidth = met.horizontalAdvance(sampleString);
         int sampleHeight = met.height();
 
         if (y + sampleHeight >= rect().height() - padding * 2)
@@ -194,7 +193,7 @@ QString DFontPreview::getLanguageSampleString(const QString &language)
     if (contents.contains(language)) {
         key = language;
     } else {
-        const QStringList parseList = language.split("_", QString::SkipEmptyParts);
+        const QStringList parseList = language.split("_", Qt::SkipEmptyParts);
         if (parseList.length() > 0 &&
             contents.contains(parseList.first())) {
             key = parseList.first();
@@ -240,7 +239,7 @@ QString DFontPreview::buildCharlistForFace(int length)
         ch = FT_Get_Next_Char(m_face, ch, &glyph);
         totalChars++;
 
-        if (retval.count() == length)
+        if (retval.size() == length)
             break;
     }
 

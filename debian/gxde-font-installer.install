@@ -2,5 +2,5 @@ usr/bin/*
 usr/share/applications/gxde-font-installer.desktop
 usr/share/polkit-1/actions/*.policy
 usr/share/gxde-font-installer/translations/*.qm
-/usr/lib/*/gxde-file-manager/plugins/previews/*.so
+#/usr/lib/*/gxde-file-manager/plugins/previews/*.so
 /usr/share/icons/hicolor/scalable/apps/*

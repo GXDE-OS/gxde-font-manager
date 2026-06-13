@@ -130,7 +130,7 @@ void ListItem::drawForeground(QRect rect, QPainter *painter, int column, int ind
         break;
     }
 
-    const int statusWidth = painter->fontMetrics().width(statusStr);
+    const int statusWidth = painter->fontMetrics().horizontalAdvance(statusStr);
     statusRect.setRight(rect.right() - 18);
     statusRect.setLeft(rect.right() - statusWidth - 18);
     font.setPointSize(11);

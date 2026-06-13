@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/include
+
+Name: gxde-font-installer
+Description: GXDE Font Installer Header Files
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lgxde-font-installer
+Cflags: -I${includedir}/gxde-font-installer
+Requires: fontconfig freetype2
