@@ -27,6 +27,13 @@ set(APP_RESOURCES
     gxde-font-installer.qrc
 )
 
+# Auto-generate .qm files from .ts files using translate_generation.sh
+add_custom_target(generate_translations ALL
+    COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/translate_generation.sh
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    COMMENT "Generating translation files using translate_generation.sh"
+)
+
 add_executable(gxde-font-installer-app
     ${APP_SOURCES}
     ${APP_HEADERS}
@@ -53,6 +60,8 @@ target_link_libraries(gxde-font-installer-app PRIVATE
 target_include_directories(gxde-font-installer-app PRIVATE
     ${PROJECT_SOURCE_DIR}/libgxde-font-installer
 )
+
+add_dependencies(gxde-font-installer-app generate_translations)
 
 install(TARGETS gxde-font-installer-app
     RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
