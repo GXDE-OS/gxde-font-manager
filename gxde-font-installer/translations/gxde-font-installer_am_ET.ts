@@ -1,4 +1,5 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="am_ET" version="2.1">
+<?xml version='1.0' encoding='utf-8'?>
+<TS language="am_ET" version="2.1">
 <context>
     <name>HomePage</name>
     <message>
@@ -37,7 +38,7 @@
     </message>
     <message>
         <source>Deepin Font Installer is used to install and uninstall font file for users with bulk install function.</source>
-        <translation type="unfinished"/>
+        <translation>የዲፕን ፎንት የስነስር ግልጋሎት የተጠቃሚ ለወጣቶች ፎንት ፋይል ያስቀምጥ እና የሚያስወግድ ምክንያት ነው።</translation>
     </message>
 </context>
 <context>
@@ -48,11 +49,11 @@
     </message>
     <message>
         <source>Bulk Install</source>
-        <translation type="unfinished"/>
+        <translation>ምንዛሪ የሚከፍለው</translation>
     </message>
     <message>
         <source>Dark theme</source>
-        <translation type="unfinished"/>
+        <translation>ደስታ ጣልቃ</translation>
     </message>
 </context>
 <context>
@@ -71,7 +72,7 @@
     </message>
     <message>
         <source>Refreshing font cache, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>የፎንት ካሽ የሚያስፋፍር ነው፤ እባክዎን ይጠብቁ...</translation>
     </message>
     <message>
         <source>Unknown</source>

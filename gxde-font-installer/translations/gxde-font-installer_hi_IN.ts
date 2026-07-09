@@ -1,32 +1,33 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="hi_IN" version="2.1">
+<?xml version='1.0' encoding='utf-8'?>
+<TS language="hi_IN" version="2.1">
 <context>
     <name>HomePage</name>
     <message>
         <source>Drag font file here</source>
-        <translation type="unfinished"/>
+        <translation>फ़ॉन्ट फ़ाइल यहाँ खींचें</translation>
     </message>
     <message>
         <source>Select file</source>
-        <translation type="unfinished"/>
+        <translation>फाइल चुनें</translation>
     </message>
 </context>
 <context>
     <name>ListItem</name>
     <message>
         <source>Installed</source>
-        <translation type="unfinished"/>
+        <translation>इंस्टॉल किया गया</translation>
     </message>
     <message>
         <source>Other version installed: %1</source>
-        <translation type="unfinished"/>
+        <translation>अन्य संस्करण स्थापित: %1</translation>
     </message>
     <message>
         <source>Installing</source>
-        <translation type="unfinished"/>
+        <translation>इंस्टॉल करना</translation>
     </message>
     <message>
         <source>Same version installed</source>
-        <translation type="unfinished"/>
+        <translation>समान संस्करण स्थापित किया गया है</translation>
     </message>
 </context>
 <context>
@@ -37,7 +38,7 @@
     </message>
     <message>
         <source>Deepin Font Installer is used to install and uninstall font file for users with bulk install function.</source>
-        <translation type="unfinished"/>
+        <translation>डिपिन फॉन्ट इंस्टॉलर का उपयोग उपयोगकर्ताओं के लिए फॉन्ट फाइल को स्थापित और हटाने के लिए किया जाता है, जिसमें बुल्क इंस्टॉल फंक्शन होता है।</translation>
     </message>
 </context>
 <context>
@@ -48,93 +49,93 @@
     </message>
     <message>
         <source>Bulk Install</source>
-        <translation type="unfinished"/>
+        <translation>बुल्क इंस्टॉल</translation>
     </message>
     <message>
         <source>Dark theme</source>
-        <translation type="unfinished"/>
+        <translation>अंधेरा थीम</translation>
     </message>
 </context>
 <context>
     <name>MultiFilePage</name>
     <message>
         <source>Install</source>
-        <translation type="unfinished"/>
+        <translation>इंस्टॉल करें</translation>
     </message>
     <message>
         <source>Installed successfully</source>
-        <translation type="unfinished"/>
+        <translation>सफलतापूर्वक स्थापित किया गया</translation>
     </message>
     <message>
         <source>View font directory</source>
-        <translation type="unfinished"/>
+        <translation>फॉन्ट डायरेक्टरी देखें</translation>
     </message>
     <message>
         <source>Refreshing font cache, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>फॉन्ट कैश को रिफ्रेश कर रहा है, कृपया प्रतीक्षा करें...</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation type="unfinished"/>
+        <translation>अज्ञात</translation>
     </message>
 </context>
 <context>
     <name>SingleFilePage</name>
     <message>
         <source>Install</source>
-        <translation type="unfinished"/>
+        <translation>इंस्टॉल करें</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation type="unfinished"/>
+        <translation>हटाएँ</translation>
     </message>
     <message>
         <source>Reinstall</source>
-        <translation type="unfinished"/>
+        <translation>पुनः स्थापित करें</translation>
     </message>
     <message>
         <source>View font directory</source>
-        <translation type="unfinished"/>
+        <translation>फॉन्ट डायरेक्टरी देखें</translation>
     </message>
     <message>
         <source>Style: </source>
-        <translation type="unfinished"/>
+        <translation>शैली:</translation>
     </message>
     <message>
         <source>Type: </source>
-        <translation type="unfinished"/>
+        <translation>प्रकार:</translation>
     </message>
     <message>
         <source>Version: </source>
-        <translation type="unfinished"/>
+        <translation>वर्जन:</translation>
     </message>
     <message>
         <source>Copyright: </source>
-        <translation type="unfinished"/>
+        <translation>कॉपीराइट:</translation>
     </message>
     <message>
         <source>Description: </source>
-        <translation type="unfinished"/>
+        <translation>विवरण:</translation>
     </message>
     <message>
         <source>Same version installed</source>
-        <translation type="unfinished"/>
+        <translation>समान संस्करण स्थापित किया गया है</translation>
     </message>
     <message>
         <source>Installed successfully</source>
-        <translation type="unfinished"/>
+        <translation>सफलतापूर्वक स्थापित किया गया</translation>
     </message>
     <message>
         <source>Removed successfully</source>
-        <translation type="unfinished"/>
+        <translation>सफलतापूर्वक हटाया गया</translation>
     </message>
     <message>
         <source>Other version installed: %1</source>
-        <translation type="unfinished"/>
+        <translation>अन्य संस्करण स्थापित: %1</translation>
     </message>
     <message>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation>किया</translation>
     </message>
 </context>
 </TS>

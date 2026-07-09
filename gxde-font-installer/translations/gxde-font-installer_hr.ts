@@ -1,4 +1,5 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="hr" version="2.1">
+<?xml version='1.0' encoding='utf-8'?>
+<TS language="hr" version="2.1">
 <context>
     <name>HomePage</name>
     <message>
@@ -37,7 +38,7 @@
     </message>
     <message>
         <source>Deepin Font Installer is used to install and uninstall font file for users with bulk install function.</source>
-        <translation type="unfinished"/>
+        <translation>Deepin Font Installer služi za instaliranje i deinstaliranje font datoteka za korisnike s funkcijom masovne instalacije.</translation>
     </message>
 </context>
 <context>
@@ -48,7 +49,7 @@
     </message>
     <message>
         <source>Bulk Install</source>
-        <translation type="unfinished"/>
+        <translation>Masovno instaliranje</translation>
     </message>
     <message>
         <source>Dark theme</source>
@@ -71,7 +72,7 @@
     </message>
     <message>
         <source>Refreshing font cache, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>Osvježavanje fonta u predmemoriji, molimo pričekajte...</translation>
     </message>
     <message>
         <source>Unknown</source>

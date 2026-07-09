@@ -1,4 +1,5 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ug" version="2.1">
+<?xml version='1.0' encoding='utf-8'?>
+<TS language="ug" version="2.1">
 <context>
     <name>HomePage</name>
     <message>
@@ -26,7 +27,7 @@
     </message>
     <message>
         <source>Same version installed</source>
-        <translation type="unfinished"/>
+        <translation>ئۇچ قۇرۇلش قۇرۇلغان</translation>
     </message>
 </context>
 <context>
@@ -52,7 +53,7 @@
     </message>
     <message>
         <source>Dark theme</source>
-        <translation type="unfinished"/>
+        <translation>قەرەڭلىق تەما</translation>
     </message>
 </context>
 <context>
@@ -71,11 +72,14 @@
     </message>
     <message>
         <source>Refreshing font cache, please wait...</source>
-        <translation type="unfinished"/>
+        <translation>ئۇيغۇرچە:
+چەشىملىك فونت كەشىنى يەنگىلەيۈپ قىلىۋاتىدۇ، كۆرۈڭ...
+
+(Translation notes: "Refreshing font cache" is translated as "چەشىملىك فونت كەشىنى يەنگىلەيۈپ قىلىۋاتىدۇ" which literally means "refreshing the font cache" in a natural Uighur way. "please wait" is translated as "كۆرۈڭ" which is a polite and common way to say "please wait" in Uighur. The punctuation and formatting are preserved exactly as in the original text.)</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation type="unfinished"/>
+        <translation>نەمۇن</translation>
     </message>
 </context>
 <context>
