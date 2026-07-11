@@ -1,8 +1,9 @@
-gxde-font-installer (2.0.0) UNRELEASED; urgency=medium
+gxde-font-installer (2.0.1) UNRELEASED; urgency=medium
 
   * Qt6 迁移
+  * 完善翻译
 
- -- gfdgd_xi <3025613752@qq.com>  Sat, 13 Jun 2026 22:23:21 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Sat, 11 Jul 2026 13:46:59 +0800
 
 gxde-font-installer (0.1-1) unstable; urgency=medium
 
