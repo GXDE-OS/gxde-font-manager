@@ -1,0 +1,64 @@
+# Maintainer: CharOfString <root@charofstring.cc>
+pkgbase=gxde-font-installer-git
+pkgname=('gxde-font-installer-git' 'libgxde-font-installer-git')
+pkgver=2.0.2
+pkgrel=1
+pkgdesc='GXDE font installer'
+arch=('x86_64' 'aarch64')
+url="https://github.com/GXDE-OS/gxde-font-manager"
+license=('GPL-3.0-or-later')
+makedepends=('git' 'cmake' 'ninja' 'pkgconf' 'qt6-base' 'qt6-svg' 'qt6-tools' 'dtk2widget-qt6-git'
+             'dtk6core-git' 'dtk6log-git' 'fontconfig' 'freetype2')
+source=()
+sha512sums=()
+
+# 直接使用 PKGBUILD 所在的 git 仓库作为源码 ・ Build from the git checkout this PKGBUILD lives in.
+_srcroot() {
+  git -C "$startdir" rev-parse --show-toplevel
+}
+
+build() {
+  cmake -B build -S "$(_srcroot)" -GNinja \
+    -DCMAKE_BUILD_TYPE=None \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_LIBDIR=lib
+  ninja -C build
+  DESTDIR="$srcdir/root" ninja -C build install
+}
+
+# 按 debian/*.install 拆分 ・ Split as in debian/*.install.
+_pick() {
+  local _f
+  cd "$srcdir/root"
+  for _f in "$@"; do
+    [[ -e $_f || -L $_f ]] || { echo "missing: $_f" >&2; return 1; }
+    install -d "$pkgdir/$(dirname "$_f")"
+    mv "$_f" "$pkgdir/$_f"
+  done
+}
+
+package_gxde-font-installer-git() {
+  # gfont-install/gfont-uninstall 通过 pkexec 运行 ・ gfont-install and gfont-uninstall run through pkexec.
+  depends=("libgxde-font-installer-git=$pkgver-$pkgrel" 'dtk2widget-qt6-git' 'dtk6core-git' 'qt6-base'
+           'qt6-svg' 'polkit' 'hicolor-icon-theme' 'libgcc' 'libstdc++' 'glibc')
+  provides=('gxde-font-installer')
+  conflicts=('gxde-font-installer' 'gxde-font-manager-git')
+
+  _pick usr/bin usr/share/applications/gxde-font-installer.desktop usr/share/polkit-1/actions \
+        usr/share/gxde-font-installer/translations usr/share/icons
+  # 与 debian/gxde-font-installer.postinst 相同，gfont-install 将字体安装到此目录
+  # Same as debian/gxde-font-installer.postinst; gfont-install installs fonts here.
+  install -d "$pkgdir/usr/share/fonts/gxde-font-install"
+}
+
+package_libgxde-font-installer-git() {
+  pkgdesc='GXDE font installer library'
+  # Debian 把开发文件拆到 -dev 包，这里按 Arch 惯例合并 ・ Debian splits the development files into -dev; merged here as usual on Arch.
+  depends=('dtk2widget-qt6-git' 'qt6-base' 'freetype2' 'libgcc' 'libstdc++' 'glibc')
+  provides=('libgxde-font-installer')
+  conflicts=('libgxde-font-installer' 'gxde-font-manager-git')
+
+  cd "$srcdir/root"
+  _pick usr/lib/libgxde-font-installer.so* usr/lib/pkgconfig/gxde-font-installer.pc \
+        usr/include/gxde-font-installer usr/share/gxde-font-installer/CONTENTS.txt
+}
