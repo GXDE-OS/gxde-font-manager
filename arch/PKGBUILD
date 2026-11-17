@@ -1,14 +1,14 @@
 # Maintainer: CharOfString <root@charofstring.cc>
-pkgbase=gxde-font-installer-git
-pkgname=('gxde-font-installer-git' 'libgxde-font-installer-git')
+pkgbase=gxde-font-installer
+pkgname=('gxde-font-installer' 'libgxde-font-installer')
 pkgver=2.0.2
 pkgrel=1
 pkgdesc='GXDE font installer'
 arch=('x86_64' 'aarch64')
 url="https://github.com/GXDE-OS/gxde-font-manager"
 license=('GPL-3.0-or-later')
-makedepends=('git' 'cmake' 'ninja' 'pkgconf' 'qt6-base' 'qt6-svg' 'qt6-tools' 'dtk2widget-qt6-git'
-             'dtk6core-git' 'dtk6log-git' 'fontconfig' 'freetype2')
+makedepends=('git' 'cmake' 'ninja' 'pkgconf' 'qt6-base' 'qt6-svg' 'qt6-tools' 'dtk2widget-qt6'
+             'gxde-dtk6core' 'gxde-dtk6log' 'fontconfig' 'freetype2')
 source=()
 sha512sums=()
 
@@ -37,12 +37,13 @@ _pick() {
   done
 }
 
-package_gxde-font-installer-git() {
+package_gxde-font-installer() {
   # gfont-install/gfont-uninstall 通过 pkexec 运行 ・ gfont-install and gfont-uninstall run through pkexec.
-  depends=("libgxde-font-installer-git=$pkgver-$pkgrel" 'dtk2widget-qt6-git' 'dtk6core-git' 'qt6-base'
+  depends=("libgxde-font-installer=$pkgver-$pkgrel" 'dtk2widget-qt6' 'gxde-dtk6core' 'qt6-base'
            'qt6-svg' 'polkit' 'hicolor-icon-theme' 'libgcc' 'libstdc++' 'glibc')
-  provides=('gxde-font-installer')
-  conflicts=('gxde-font-installer' 'gxde-font-manager-git')
+  provides=("gxde-font-installer-git=$pkgver")
+  conflicts=('gxde-font-manager-git' 'gxde-font-installer-git')
+  replaces=('gxde-font-installer-git')
 
   _pick usr/bin usr/share/applications/gxde-font-installer.desktop usr/share/polkit-1/actions \
         usr/share/gxde-font-installer/translations usr/share/icons
@@ -51,12 +52,13 @@ package_gxde-font-installer-git() {
   install -d "$pkgdir/usr/share/fonts/gxde-font-install"
 }
 
-package_libgxde-font-installer-git() {
+package_libgxde-font-installer() {
   pkgdesc='GXDE font installer library'
   # Debian 把开发文件拆到 -dev 包，这里按 Arch 惯例合并 ・ Debian splits the development files into -dev; merged here as usual on Arch.
-  depends=('dtk2widget-qt6-git' 'qt6-base' 'freetype2' 'libgcc' 'libstdc++' 'glibc')
-  provides=('libgxde-font-installer')
-  conflicts=('libgxde-font-installer' 'gxde-font-manager-git')
+  depends=('dtk2widget-qt6' 'qt6-base' 'freetype2' 'libgcc' 'libstdc++' 'glibc')
+  provides=("libgxde-font-installer-git=$pkgver")
+  conflicts=('gxde-font-manager-git' 'libgxde-font-installer-git')
+  replaces=('libgxde-font-installer-git')
 
   cd "$srcdir/root"
   _pick usr/lib/libgxde-font-installer.so* usr/lib/pkgconfig/gxde-font-installer.pc \
